@@ -1,0 +1,63 @@
+<div class="container-search">
+  <div class="input-group">
+    <input type="text" id="search-text" [(ngModel)] ="filterText"  class="form-control" placeholder="Search..."  />
+    <span>
+      <i class="icofont-ui-search"></i>
+    </span>
+  </div>
+</div>
+    <div>
+      <div class="col-md-2">
+        <label class="title">Africa</label>
+        <div class="col-md-12 country" *ngFor="let country of countriesAfrica | appFilter: filterText" >
+          <button (click) = "selectedCountry(country)">
+            <img src="{{country.flag}}">{{ country.name }} <i *ngIf="country.fav == true" class="icofont-star"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <label class="title">America</label>
+        <div class="col-md-12 country" *ngFor="let country of countriesAmerica | appFilter: filterText" >
+          <button (click) = "selectedCountry(country)">
+            <img src="{{country.flag}}">{{ country.name }} <i *ngIf="country.fav == true" class="icofont-star"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <label class="title">Asia</label>
+        <div class="col-md-12 country" *ngFor="let country of countriesAsia | appFilter: filterText" >
+          <button (click) = "selectedCountry(country)">
+           <img src="{{country.flag}}">{{ country.name }}  <i *ngIf="country.fav == true" class="icofont-star"></i>
+          </button>
+        </div>
+      </div>
+
+    <div class="col-md-2">
+      <label class="title">Europa</label>
+  
+      <div class="col-md-12 country" *ngFor="let country of countriesEurope | appFilter: filterText" >
+        <button (click) = "selectedCountry(country)">
+          <img src="{{country.flag}}">{{ country.name }}  <i *ngIf="country.fav == true" class="icofont-star"></i>
+        </button>
+        
+      </div>
+    </div>
+    <div class="col-md-2">
+      <label class="title">Oceania</label>
+  
+      <div class="col-md-12 country" *ngFor="let country of countriesOceania | appFilter: filterText" >
+        <button (click) = "selectedCountry(country)">
+          <img src="{{country.flag}}">{{ country.name }} <i *ngIf="country.fav == true" class="icofont-star"></i>
+        </button>
+        
+      </div>
+    </div>
+  </div>
+
+  <modalCountry [activeModal] = "activeModal"  
+                [countrySelected] = "selectCountry" 
+                (closeModal) = "closeM()"
+                (activeFavorite) = "selectFavoriteCountry($event)"></modalCountry>
+  

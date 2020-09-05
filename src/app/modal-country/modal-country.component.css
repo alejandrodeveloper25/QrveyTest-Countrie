@@ -1,0 +1,99 @@
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:1;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 50px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+overflow: auto;
+}
+
+.close {
+	color: #a5a5a5;
+	position: absolute;
+	right: 10px;
+	text-align: center;
+    top: 8px;
+    cursor: pointer;
+
+}
+.close>i:hover { 
+    color: #3f4041; 
+}
+
+@media (min-width: 600px) {
+    .col-md-6{
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .col-md-6{
+        float: left;
+        width: 100%;
+        margin-bottom: 3%;
+    }
+}
+
+.col-md-6>div{
+    margin: 1%;
+}
+
+.col-md-6>div>.title{
+    font-size: 30px;
+}
+
+.col-md-6>div>.on{
+    font-size: 25px;
+    color: goldenrod;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.col-md-6>div>.on:hover{
+    color: rgb(109, 81, 12);
+}
+
+
+.col-md-6>div>.off{
+    font-size: 25px;
+    color: lightgray;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.col-md-6>div>.off:hover{
+    color: gray;
+}
+
+.col-md-6>img{
+    width: 60%;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
+}
+
+.center{
+    text-align: center;
+}

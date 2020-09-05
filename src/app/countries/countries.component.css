@@ -1,0 +1,121 @@
+
+
+.container-search{
+    height: 100px;
+    background: gray;
+    border-radius: 20px;
+    padding: 1%;
+    margin-bottom: 2%;
+}
+
+.input-group{
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 25px;
+    width: 40%;
+}
+
+.form-control{
+    border:none;
+    background-color: transparent;
+}
+
+.input-group>span>i {
+    color: gray;
+}
+
+
+.input-group>input:focus{
+    outline: none;
+}
+
+@media (min-width: 600px) {
+    .input-group{
+        width: 40%;
+    }
+    .input-group>input{
+        width: 94%;
+    }
+    .col-md-2{
+        float: left;
+        width: 20%;
+    }
+
+    .col-md-12{
+        float: left;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .input-group{
+        width: 96%;
+    }
+    .input-group>input{
+        width: 85%;
+    }
+
+    .col-md-2{
+        float: left;
+        width: 100%;
+    }
+
+    .col-md-12{
+        float: left;
+        width: 50%;
+    }
+}
+
+
+
+.col-md-2>.title{
+    font-size: 19px;
+    width: 100%;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.country>button{
+    cursor: pointer;
+    background-color: white;
+    border: none white;
+    text-align: left;
+    width: 230px; 
+    text-overflow: ellipsis;
+}
+
+.country>button:hover{
+    cursor: pointer;
+    background-color:lightgray;
+    border: none white;
+    border-radius: 5px;
+}
+
+.country>button:active{
+    cursor: pointer;
+    background-color: gray;
+    border: none white;
+    border-radius: 5px;
+}
+
+.country>button:focus{
+    cursor: pointer;
+    background-color: gray;
+    border: none white;
+    border-radius: 5px;
+}
+
+.country>button>img{
+    padding: 2px;
+    width: 20px;
+    margin-right: 7px;
+}
+
+.country>button>i{
+   color: goldenrod;
+}
+

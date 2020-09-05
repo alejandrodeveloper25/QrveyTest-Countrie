@@ -1,0 +1,43 @@
+<div *ngIf="activeModal" class="modalDialog">
+	<div>
+        <div class="close">
+            <i (click) ="close()"  class="icofont-ui-close"></i>
+        </div>
+        
+        <div class="col-md-6">
+            <div>
+                <label class="title">{{countrySelected.name}}</label> 
+                <i (click) = "actionFavorite(false)" *ngIf="countrySelected.fav" class="icofont-star on"></i>
+                <i (click) = "actionFavorite(true)" *ngIf="!countrySelected.fav" class="icofont-star off"></i>
+            </div>
+            <div>
+                <label><b>Region: </b>{{countrySelected.region}}</label>
+            </div>
+
+            <div>
+                <label><b>Population: </b>{{countrySelected.population}}</label>
+            </div>
+
+            <div>
+                <label><b>Capital: </b>{{countrySelected.capital}}</label>
+            </div>
+
+            <div>
+                <label><b>Currency: </b></label><label *ngFor="let curency of countrySelected.currencies">{{curency.name}}</label>
+            </div>
+
+            <div>
+                <label><b>Languages: </b></label><label *ngFor="let language of countrySelected.languages">{{language.nativeName}} </label>
+            </div>
+
+            <div>
+                <label><b>Border Countries: </b>{{countrySelected.borders}}</label>
+            </div>
+            
+        </div>
+        <div class="col-md-6 center">
+            <img src="{{countrySelected.flag}}">
+        </div>
+        
+	</div>
+</div>
