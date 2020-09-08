@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm install` instalamos inicialmente las dependencias de con la version de node v12.18.3 y luego corremos el servicor con 'npm start'
 
 ## Code scaffolding
 
